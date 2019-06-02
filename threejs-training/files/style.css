@@ -1,0 +1,49 @@
+		body {
+		  color: #fff;
+		  font-family: Monospace;
+		  font-size: 13px;
+		  text-align: center;
+
+		  background-color: #000;
+		  margin: 0px;
+		  overflow: hidden;
+		}
+
+		#info {
+		  color: #000000;
+		  position: absolute;
+		  top: 0px;
+		  width: 100%;
+			padding: 5px;
+			font-family: "Helvetica";
+		}
+
+		#menu {
+		  color: #000000;
+		  position: absolute;
+		  top: 0px;
+		  width: 50%;
+			padding: 5px;
+			font-size: 20px;
+			font-family: "Arial";
+		}
+
+		a {
+		  color: gold;
+		}
+
+		#webglmessage {
+		  font-family: monospace;
+		  font-size: 13px;
+
+		  text-align: center;
+		  background: rgb(0, 0, 50);
+		  color: #fff;
+		  padding: 1em;
+
+		  width: 475px;
+		  margin: 5em auto 0;
+
+		  display: none;
+		}
+	</style>
