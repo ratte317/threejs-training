@@ -1,0 +1,245 @@
+body {
+  font-family: Adobe Garamond Pro, serif, "Yu Gothic","游ゴシック体","YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sserif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  list-style-type: none; 
+  margin: 0;
+  background-color: #FFFEF3;
+}
+h1 {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+
+#allWrapper {
+	position: relative;
+	.header {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 20%;
+	  height: 100%;
+	  background: #333333;
+		text-align: center;
+	  	.header_logo{
+	  		width: 62%;
+	  		margin-top: 200px;
+	  		margin-left: auto;
+	  		margin-right: auto;
+					.overlay {
+						position: absolute;
+						width: 62%;
+						height: 0;
+						cursor: pointer;
+	    				transition: all  0.5s ease;
+						opacity: 0.0;
+						/*.overlayの中にマウスがホバーしたとき*/
+						&:hover {
+							opacity: 1.0 !important;
+						}
+					}
+	  	}
+	}
+
+	.wrap-container {
+		position: relative;
+		min-height: 100vh;
+		width: 80%;
+		min-height: 100vh;
+		top: 0;
+		left: 20%;
+		padding: 12px 0;
+		.container {
+			width: 87%;
+			max-width: 90%;
+			margin: 0 auto;
+			#wrapInformation li{
+				display: inline-block;
+				padding-right: 20px;
+				font-size: 12px;
+			    -webkit-transition: all 0.5s ease;
+			    -moz-transition: all 0.5s ease;
+			    -o-transition: all 0.5s ease;
+			    transition: all  0.5s ease;
+			}
+			#wrapInformation li:hover {
+	 		 	color: #14FFD4;
+			}
+
+		  #menu{
+		  	padding-top: 80px;
+		  	padding-bottom: 50px;
+		  	font-size: 30px;
+				a {
+				  position: relative;
+				  display: inline-block;
+				  text-decoration: none;
+				}
+				a::after {
+				  position: absolute;
+				  margin-top: -2px;
+				  top: 50%;
+				  left: 0;
+				  content: '';
+				  width: 100%;
+				  height: 1px;
+				  background: #14FFD4;
+				  transform: scale(0, 2);
+				  transform-origin: right top;
+				  transition: transform .5s;
+				}
+				a:hover::after {
+				  transform-origin: left top;
+				  transform: scale(1, 1);
+				}
+	 		}
+
+	 		#contents{
+		 		position: relative;
+		 		min-height: calc(~'100vh - 460px');
+			  	padding-top: 25px;
+			  	padding-bottom: 25px;
+			  	font-size: 25px;
+			  	line-height: 140%;
+			  	color: #828282;
+			  	.content-wrapper {
+			  		display: none;
+			  		top: 0;
+			  		left: 0;
+			  			.fri_member {
+			  				padding-bottom: 100px;
+			  				line-height: 150%;
+			  				font-size: 18px;
+			  				h1 {
+			  					padding-bottom: 20px;
+			  				}
+			  				li {
+			  				}
+			  				p {
+			  					padding-top: 20px;
+			  				}
+			  			}
+			  	}
+	 		}
+
+		} /*end container*/
+	}
+
+	.footer {
+		bottom: 0;
+		width: 87%;
+		.footer-content {
+			max-width: 85%;
+			margin: 0 auto;
+			padding-top: 50px;
+			padding-bottom: 20px;
+			font-size: 14px;
+		}
+	}/*end wrap-container*/
+
+
+	/*ここからスマホの時のスタイル*/
+	@media only screen and (max-width : 600px) {
+		.header {
+			display: none;
+		}
+		#wrapInformation {
+			display: none;
+		}
+
+		.sp-header {
+			display: block;
+			width: 100%;
+			height: 70px;
+			background-color: #333333;
+			.sp-header-logo {
+				position: absolute;
+				width: 250px;
+				padding-left: 22px;
+				padding-top: 10px;
+				.overlay {
+					position: absolute;
+					width: 250px;
+					cursor: pointer;
+    				transition: all  0.5s ease;
+					opacity: 0.0;
+					z-index: 10;
+					/*.overlayの中にマウスがホバーしたとき*/
+					&:hover {
+						opacity: 1.0 !important;
+					}
+				}
+				.sp-logo-after {
+					position: absolute;
+					width: 250px;
+				}
+			}
+		}
+		.wrap-container {
+			width: 100%;
+			left: 0;
+			min-height: calc(~'100vh - 70px');
+			.container {
+				width: 85%;
+				max-width: 90%;
+				margin: 0 auto;
+			 	#menu{
+			  	padding-top: 50px;
+			  	padding-bottom: 20px;
+			  	font-size: 30px;
+		  	}
+		 		#contents{
+			 		min-height: calc(~'100vh - 540px');
+				  	padding-top: 25px;
+				  	padding-bottom: 25px;
+				  	font-size: 20px;
+				  	line-height: 140%;
+				  	color: #828282;
+				  	.content-wrapper {
+				  			.fri_member {
+				  				font-size: 16px!important;
+			  					padding-bottom: 70px;
+				  				h1 {
+				  					font-size: 16px!important;
+				  				}
+				  				li {
+				  				}
+				  				p {
+				  					padding-top: 20px;
+				  				}
+				  			}
+				  	}
+		 		}
+			}
+
+			.footer{
+					width: 100%;
+					#sp-wrapInformation {
+						padding-top: 20px;
+						padding-bottom: 20px;
+						#sp-wrapInformation li {
+					    -webkit-transition: all 0.5s ease;
+					    -moz-transition: all 0.5s ease;
+					    -o-transition: all 0.5s ease;
+					    transition: all  0.5s ease;
+						}
+						#sp-wrapInformation li:hover {
+			 			 	color: #14FFD4;
+						}
+					}
+			}
+		}
+	}
+
+	@media only screen and (min-width : 600px) {
+	.sp-header {
+		display: none;
+	}
+		#sp-wrapInformation{
+			display: none;
+		}
+	}
+
+}
